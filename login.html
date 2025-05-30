@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Login</title></head>
+<body>
+<h2>Beast App Login</h2>
+<form id="loginForm">
+  <input type="text" id="username" placeholder="Username" required><br>
+  <input type="password" id="password" placeholder="Password" required><br>
+  <button type="submit">Login</button>
+</form>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const u = document.getElementById('username').value;
+  const p = document.getElementById('password').value;
+  if (u === 'gm' && p === '983f9e455f9c') {
+    sessionStorage.setItem('auth', 'yes');
+    window.location.href = 'index.html';
+  } else {
+    alert('Login failed');
+  }
+});
+</script>
+</body>
+</html>

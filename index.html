@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COD Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<script>
+if (sessionStorage.getItem('auth') !== 'yes') {
+  window.location.href = 'login.html';
+}
+</script>
+<h1>Correos COD Orders</h1>
+<div id="orders"></div>
+<script src="script.js"></script>
+</body>
+</html>
