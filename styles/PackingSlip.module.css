@@ -1,0 +1,106 @@
+/* Styles specific to the packing slip component.  These rules
+ * approximate the layout and typography of the original HTML/CSS
+ * template provided by the user.  Measurements are defined in
+ * millimetres where possible to align with A4 printing.  A print
+ * media query reduces font sizes and padding to optimise space on
+ * paper.
+ */
+
+.packingSlip {
+  width: 210mm;
+  margin: 10mm auto;
+  padding: 15mm;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.customerInfo {
+  text-align: right;
+  font-size: 14px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 0;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.itemsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+}
+
+.itemsTable th,
+.itemsTable td {
+  border: 1px solid #ddd;
+  padding: 4px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.itemsTable th {
+  background: #f3f3f3;
+  font-weight: 600;
+}
+
+.itemsTable img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+}
+
+.footer {
+  margin-top: 8px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media print {
+  .packingSlip {
+    width: auto;
+    margin: 0;
+    border: none;
+    padding: 10mm;
+    font-size: 10pt;
+  }
+  .title {
+    font-size: 18pt;
+  }
+  .summary {
+    font-size: 9pt;
+  }
+  .itemsTable th,
+  .itemsTable td {
+    font-size: 8pt;
+    padding: 2pt;
+  }
+  .itemsTable img {
+    width: 50px;
+    height: 50px;
+  }
+}
